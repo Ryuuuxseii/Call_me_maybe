@@ -5,6 +5,7 @@ description = "hey i jus met uuu"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "llm-sdk",
     "numpy",
     "pydantic",
 ]
@@ -30,3 +31,11 @@ warn_unused_ignores = true
 ignore_missing_imports = true
 disallow_untyped_defs = true
 check_untyped_defs = true
+
+[tool.uv.workspace]
+members = [
+    "llm_sdk",
+]
+
+[tool.uv.sources]
+llm-sdk = { workspace = true, editable = true }
